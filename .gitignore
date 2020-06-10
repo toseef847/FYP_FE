@@ -1,3 +1,10 @@
-# Ignore all images
+# Ignore default text files
+/CHANGELOG.txt
+/COPYRIGHT.txt
+/INSTALL*.txt
+/LICENSE.txt
+/MAINTAINERS.txt
+/UPGRADE.txt
+/README.txt
 
 /assets/img
