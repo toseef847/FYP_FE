@@ -5,8 +5,44 @@
   color: #fff;
   background-color: var(--primary-color)
 };
+@font-face {
+  font-family: osr;
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: osb;
+  src: url(../fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: osl;
+  src: url(../fonts/OpenSans-Light.ttf);
+}
+@font-face {
+  font-family: rr;
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: rl;
+  src: url(../fonts/Raleway-Light.ttf);
+}
+@font-face {
+  font-family: pb;
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: pl;
+  src: url(../fonts/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: pm;
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: pr;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: osr !important;
   color: #4d4643;
 }
 
@@ -20,7 +56,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: pb;
 }
 
 /*--------------------------------------------------------------
@@ -78,9 +114,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-weight: 700;
+  /* font-weight: 700; */
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  color: #252d40 !important;
 }
 
 #header .logo a {
@@ -137,7 +174,8 @@ li.navlink_highlighted > a {
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
+  font-family: osr !important;
+  /* letter-spacing: 0.3px; */
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -365,6 +403,9 @@ li.navlink_highlighted > a {
   left: 0;
   background: rgba(0, 0, 0,0.3);
 }
+.col-md-12.text-center.main-heading {
+  color: #252d40;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -381,6 +422,9 @@ li.navlink_highlighted > a {
 }
 .simple-banner-caption {
   margin-top: 70px;
+}
+.banner-text > h1 {
+  color: #252d40;
 }
 .banner-text {
   text-align: center;
@@ -420,45 +464,96 @@ form {
 }
 
 /*--------------------------------------------------------------
-# Sections General
+# SECTIONS CATEGORIES
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
   overflow: hidden;
 }
-
-.section-bg {
-  background-color: #f7f7f7;
+.main-heading > h2 > span {
+  color: #1bbd36;
 }
-
-.section-title {
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-.section-title h2 {
-  font-size: 32px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+.category-box {
   position: relative;
+  height: 210px;
+  background: #fff;
+  box-shadow: 0 5px 25px 0 rgba(41,128,185,0.15);
+  -webkit-box-shadow: 0 5px 25px 0 rgba(41,128,185,0.15);
+  border-radius: 5px;
+  text-align: center;
+  padding: 50px 12px 30px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  overflow: hidden;
+  transition: .6s linear;
+}
+.category-box .category-desc {
+  z-index: 2;
+}
+.category-box .category-desc .category-icon {
+  font-size: 40px;
+  color: #ff7c39;
+  margin-bottom: 10px;
+  transition: .6s cubic-bezier(0.45,0.01,0.1,1.49);
+}
+.category-box .category-desc i {
+  color: #03a84e;
+}
+.category-box .category-desc i {
+  font-size: 40px;
+  color: #11b719;
+  margin-bottom: 7px;
+  width: auto;
+  height: auto;
+  transition: .6s cubic-bezier(0.45,0.01,0.1,1.49);
+}
+.category-detail.category-desc-text h4 {
+    font-size: 16px;
+    color: #252d40;
 }
 
-.section-title h2::after {
-  content: '';
+/******************** HOW IT WORKS ********************/
+.how-it-works {
+  background-color: #F4F5FC;
+}
+.working-process {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all .4s;
+}
+.wp:hover .working-process{
+  box-shadow: 0px 1px 15px rgba(0,0,0,0.1);
+  transform: scale3d(1.03,1.03,1);
+}
+span.process-img {
+  width: 80px;
+  height: 80px;
+  margin: 15px auto 0;
+  position: relative;
+  display: inline-block;
+}
+span.process-img img {
+  z-index: 1;
+  width: 80%;
+}
+span.process-num {
   position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #1bbd36;
-  bottom: 0;
-  left: calc(50% - 25px);
+  font-size: 60px;
+  font-weight: 600;
+  color: #bbc7e1;
+  left: -30px;
+  top: -10px;
+  opacity: .2;
+}
+.working-process h4 {
+  margin: 10px 0;
+  font-size: 16px;
 }
 
-.section-title p {
-  margin-bottom: 0;
-}
+/************** HOW IT WORKS ENDS HERE **************/
 
 /*--------------------------------------------------------------
 # Breadcrumbs
