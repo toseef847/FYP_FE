@@ -394,6 +394,9 @@ li.navlink_highlighted > a {
     border-left: 0;
   }
 }
+.main {
+  padding-top: 75px;
+}
 .js_overlay {
   width: 100%;
   height: 100%;
@@ -610,6 +613,39 @@ span.process-num {
   }
 }
 
+/************* SIGN UP PAGE *************/
+.inner-header-title{
+  background-image: url(../img/blog-2.jpg);
+  border-bottom: 4px solid #03a84e;
+  text-align: center;
+  color: #fff;
+  overflow: visible;
+  position: relative;
+  background-size: cover;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner-header-title > .container{
+  z-index: 111;
+}
+section.gray, .gray {
+  background: #f6f7f9;
+}
+.new-logwrap {
+  background: #fff;
+  padding: 70px;
+  margin: 0 auto;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.signupform_cont{
+  margin: 0 auto;
+}
+
+/************* SIGN UP PAGE ENDS *************/
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
