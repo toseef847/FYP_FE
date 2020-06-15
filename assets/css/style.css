@@ -974,6 +974,9 @@ ul.nav-tabs.modern-tabs > li.active > a:hover {
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
+.clients{
+  text-align: center;
+}
 .clients .clients-wrap {
   border-top: 1px solid #ececec;
   border-left: 1px solid #ececec;
@@ -993,9 +996,9 @@ ul.nav-tabs.modern-tabs > li.active > a:hover {
 
 .clients .client-logo img {
   transition: all 0.3s ease-in-out;
-  height: 36px;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  height: 100px;
+ /* -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);*/
 }
 
 .clients .client-logo:hover img {
@@ -1007,12 +1010,20 @@ ul.nav-tabs.modern-tabs > li.active > a:hover {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+.about-us img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  width: 100%;
+}
 .about-us .content h2 {
   font-weight: 700;
   font-size: 42px;
   line-height: 60px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  transition: ease-in-out;
 }
 
 .about-us .content h3 {
@@ -1046,6 +1057,9 @@ ul.nav-tabs.modern-tabs > li.active > a:hover {
 /*--------------------------------------------------------------
 # Our Team
 --------------------------------------------------------------*/
+#team{
+  text-align: center;
+}
 .team .member {
   margin-bottom: 20px;
   overflow: hidden;
@@ -1090,6 +1104,7 @@ ul.nav-tabs.modern-tabs > li.active > a:hover {
 }
 
 .team .member .member-info {
+  text-align: center;
   padding: 25px 15px;
 }
 
@@ -1121,6 +1136,9 @@ ul.nav-tabs.modern-tabs > li.active > a:hover {
 /*--------------------------------------------------------------
 # Our Skills
 --------------------------------------------------------------*/
+#skills{
+  text-align: center;
+}
 .skills .progress {
   height: 50px;
   display: block;
@@ -1147,7 +1165,7 @@ ul.nav-tabs.modern-tabs > li.active > a:hover {
 }
 
 .skills .progress-bar {
-  width: 1px;
+  width: 5px;
   height: 10px;
   transition: .9s;
   background-color: #1bbd36;
