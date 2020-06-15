@@ -1072,6 +1072,7 @@ ul.nav-tabs.modern-tabs > li.active > a:hover {
 .team .member .member-img {
   position: relative;
   overflow: hidden;
+  max-height: 250px;
 }
 
 .team .member .social {
