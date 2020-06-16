@@ -57,30 +57,41 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li class="navlink_highlighted signup"><a href="register.html">Sign Up</a></li>
-          <li class="navlink_highlighted login"><a href="login.html" data-toggle="modal" data-target="#exampleModal">Log In</a>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
+          <li class="navlink_highlighted login"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Log In</a>
+            <div class="modal fade login-model" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <h5 class="modal-title text-center" id="exampleModalCenterTitle">Login</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <div class="modal-body">
+                  <div class="modal-body new-logwrap login-form-cont">
                     <form>
-                      <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Recipient:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                    <div class="form-group">
+                      <label>Email</label>
+                      <div class="input-with-icon">
+                        <input type="email" class="form-control" placeholder="Enter Your Email">
+                        <i class="far fa-envelope"></i>
                       </div>
-                      <div class="form-group">
-                        <label for="message-text" class="col-form-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <div class="input-with-icon">
+                        <input type="password" class="form-control" placeholder="Enter Your Password">
+                        <i class="fas fa-lock"></i>
                       </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Send message</button>
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    </div>
+                    <div class="form-groups">
+                      <button type="submit" class="btn full-width">Login</button>
+                    </div>
+                    <small class="no-account">Don't have an account? <a href="register.html">Register here</a></small>
+                  </form>
                   </div>
                 </div>
               </div>
@@ -119,32 +130,34 @@
       <form class="bt-form">
         <div class="row">
           <div class="col-md-4 col-sm-6">
-            <input type="text" class="form-control" placeholder="Skills, Designations, Keyword">
+            <input type="text" class="form-control" placeholder="Domain, Skills e.g. Web Dev, Mobile Dev, SEO">
           </div>
           <div class="col-md-4 col-sm-6">
-            <select id="choose-city" class="form-control select2-hidden-accessible" data-select2-id="choose-city" tabindex="-1" aria-hidden="true">
-              <option data-select2-id="2">Choose City</option>
-              <option>Lahore</option>
-              <option>London</option>
-              <option>England</option>
-              <option>Pratapcity</option>
-              <option>Ukrain</option>
-              <option>Wilangana</option>
-            </select>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="easy-autocomplete" style="width: 373px;">
-              <input type="text" class="form-control" id="companies" placeholder="Companies" autocomplete="off">
+            <div class="easy-autocomplete">
+              <input type="text" class="form-control" id="companies" placeholder="Location in  Lahore" autocomplete="off">
               <div class="easy-autocomplete-container" id="eac-container-companies">
                 <ul></ul>
               </div>
             </div>
           </div>
+          <div class="col-md-4 col-sm-6">
+            <select id="choose-city" class="form-control select2-hidden-accessible" data-select2-id="choose-city" tabindex="-1" aria-hidden="true">
+              <option data-select2-id="2">Salary Range</option>
+              <option>20K to 35K</option>
+              <option>35K to 45K</option>
+              <option>45K to 60K</option>
+              <option>60K to 80K</option>
+              <option>80K to 100K</option>
+              <option>100K to 150K</option>
+              <option>150K to 200K</option>
+              <option>> 200K</option>
+            </select>
+          </div>
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-6">
-            <div class="easy-autocomplete" style="width: 373px;">
-              <input type="text" class="form-control" id="location" placeholder="Searc By location" autocomplete="off">
+            <div class="easy-autocomplete">
+              <input type="text" class="form-control" id="location" placeholder="Experience in Years" autocomplete="off">
               <div class="easy-autocomplete-container" id="eac-container-location">
                 <ul></ul>
               </div>
@@ -169,16 +182,219 @@
 
   <main id="main">
 
+  <!-- LATEST JOBS -->
+    <section class="latest-jobs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center main-heading new-jobs-title">
+            <p>200 New Jobs</p>
+            <h2>New &amp; Random <span>Jobs</span></h2>
+          </div>
+        </div>
+        <div class="row extra-mrg">
+          <!-- Single New Job -->
+          <div class="col-md-3 col-sm-6">
+            <div class="job-instructor-layout">
+              <span class="tg-themetag tg-featuretag">Premium</span>
+              <div class="brows-job-type"><span class="freelanc">Freelancer</span></div>
+              <div class="job-instructor-thumb">
+                <a href="job-detail.html"><img src="assets/img/com-2.jpg" class="img-fluid" alt=""></a>
+              </div>
+              <div class="job-instructor-content">
+                <h4 class="instructor-title"><a href="job-detail.html">Web Designing</a></h4>
+                <div class="instructor-skills">
+                  CSS3, HTML5, Javascript, Bootstrap, Jquery
+                </div>
+              </div>
+              <div class="job-instructor-footer">
+                <div class="instructor-students">
+                  <h5 class="instructor-scount">$3.2K - $5K</h5>
+                </div>
+                <div class="instructor-corses">
+                  <span class="c-counting">7 Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single New Job -->
+          <div class="col-md-3 col-sm-6">
+            <div class="job-instructor-layout">
+              <div class="brows-job-type"><span class="full-time">Full Time</span></div>
+              <div class="job-instructor-thumb">
+                <a href="job-detail.html"><img src="assets/img/com-3.jpg" class="img-fluid" alt=""></a>
+              </div>
+              <div class="job-instructor-content">
+                <h4 class="instructor-title"><a href="job-detail.html">App Developer</a></h4>
+                <div class="instructor-skills">
+                  CSS3, HTML5, Javascript, Bootstrap, Jquery
+                </div>
+              </div>
+              <div class="job-instructor-footer">
+                <div class="instructor-students">
+                  <h5 class="instructor-scount">$4.2K - $5K</h5>
+                </div>
+                <div class="instructor-corses">
+                  <span class="c-counting">2 Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single New Job -->
+          <div class="col-md-3 col-sm-6">
+            <div class="job-instructor-layout">
+              <div class="brows-job-type"><span class="part-time">Part Time</span></div>
+              <div class="job-instructor-thumb">
+                <a href="job-detail.html"><img src="assets/img/com-4.jpg" class="img-fluid" alt=""></a>
+              </div>
+              <div class="job-instructor-content">
+                <h4 class="instructor-title"><a href="job-detail.html">Software Developer</a></h4>
+                <div class="instructor-skills">
+                  CSS3, HTML5, Javascript, Bootstrap, Jquery
+                </div>
+              </div>
+              <div class="job-instructor-footer">
+                <div class="instructor-students">
+                  <h5 class="instructor-scount">$6.5K - $8K</h5>
+                </div>
+                <div class="instructor-corses">
+                  <span class="c-counting">02 Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single New Job -->
+          <div class="col-md-3 col-sm-6">
+            <div class="job-instructor-layout">
+              <span class="tg-themetag tg-featuretag">Premium</span>
+              <div class="brows-job-type"><span class="freelanc">Freelancer</span></div>
+              <div class="job-instructor-thumb">
+                <a href="job-detail.html"><img src="assets/img/com-5.jpg" class="img-fluid" alt=""></a>
+              </div>
+              <div class="job-instructor-content">
+                <h4 class="instructor-title"><a href="job-detail.html">iPhone Developer</a></h4>
+                <div class="instructor-skills">
+                  CSS3, HTML5, Javascript, Bootstrap, Jquery
+                </div>
+              </div>
+              <div class="job-instructor-footer">
+                <div class="instructor-students">
+                  <h5 class="instructor-scount">$3.7K - $6K</h5>
+                </div>
+                <div class="instructor-corses">
+                  <span class="c-counting">04 Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single New Job -->
+          <div class="col-md-3 col-sm-6">
+            <div class="job-instructor-layout">
+              <div class="brows-job-type"><span class="part-time">Part Time</span></div>
+              <div class="job-instructor-thumb">
+                <a href="job-detail.html"><img src="assets/img/com-6.jpg" class="img-fluid" alt=""></a>
+              </div>
+              <div class="job-instructor-content">
+                <h4 class="instructor-title"><a href="job-detail.html">UI/UX Designer</a></h4>
+                <div class="instructor-skills">
+                  CSS3, HTML5, Javascript, Bootstrap, Jquery
+                </div>
+              </div>
+              <div class="job-instructor-footer">
+                <div class="instructor-students">
+                  <h5 class="instructor-scount">$3.2K - $5K</h5>
+                </div>
+                <div class="instructor-corses">
+                  <span class="c-counting">05 Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single New Job -->
+          <div class="col-md-3 col-sm-6">
+            <div class="job-instructor-layout">
+              <span class="tg-themetag tg-featuretag">Premium</span>
+              <div class="brows-job-type"><span class="full-time">Full Time</span></div>
+              <div class="job-instructor-thumb">
+                <a href="job-detail.html"><img src="assets/img/com-7.jpg" class="img-fluid" alt=""></a>
+              </div>
+              <div class="job-instructor-content">
+                <h4 class="instructor-title"><a href="job-detail.html">Content Writer</a></h4>
+                <div class="instructor-skills">
+                  CSS3, HTML5, Javascript, Bootstrap, Jquery
+                </div>
+              </div>
+              <div class="job-instructor-footer">
+                <div class="instructor-students">
+                  <h5 class="instructor-scount">$304K - $6K</h5>
+                </div>
+                <div class="instructor-corses">
+                  <span class="c-counting">02 Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single New Job -->
+          <div class="col-md-3 col-sm-6">
+            <div class="job-instructor-layout">
+              <div class="brows-job-type"><span class="enternship">Tnternship</span></div>
+              <div class="job-instructor-thumb">
+                <a href="job-detail.html"><img src="assets/img/com-7.jpg" class="img-fluid" alt=""></a>
+              </div>
+              <div class="job-instructor-content">
+                <h4 class="instructor-title"><a href="job-detail.html">Project Manager</a></h4>
+                <div class="instructor-skills">
+                  CSS3, HTML5, Javascript, Bootstrap, Jquery
+                </div>
+              </div>
+              <div class="job-instructor-footer">
+                <div class="instructor-students">
+                  <h5 class="instructor-scount">$37.5K - $8K</h5>
+                </div>
+                <div class="instructor-corses">
+                  <span class="c-counting">07 Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single New Job -->
+          <div class="col-md-3 col-sm-6">
+            <div class="job-instructor-layout">
+              <span class="tg-themetag tg-featuretag">Premium</span>
+              <div class="brows-job-type"><span class="full-time">Full Time</span></div>
+              <div class="job-instructor-thumb">
+                <a href="job-detail.html"><img src="assets/img/com-1.jpg" class="img-fluid" alt=""></a>
+              </div>
+              <div class="job-instructor-content">
+                <h4 class="instructor-title"><a href="job-detail.html">Wordpress Expert</a></h4>
+                <div class="instructor-skills">
+                  CSS3, HTML5, Javascript, Bootstrap, Jquery
+                </div>
+              </div>
+              <div class="job-instructor-footer">
+                <div class="instructor-students">
+                  <h5 class="instructor-scount">$10.2K - $16K</h5>
+                </div>
+                <div class="instructor-corses">
+                  <span class="c-counting">02 Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- LATEST JOBS ENDS -->
+
     <!-- BROWSE BY CATEGORIES -->
     <section class="categories">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 text-center main-heading">
+          <div class="col-md-12 text-center main-heading categories">
             <h2 >Browse Jobs By <span>Category</span></h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-3 col-sm-6">
+        <div class="row categories_row">
+          <div class="col-md-3 col-sm-6 category-cont">
             <a href="#">
               <div class="category-box">
                 <div class="category-desc">
@@ -193,7 +409,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6  category-cont">
             <a href="#">
               <div class="category-box">
                 <div class="category-desc">
@@ -208,7 +424,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6  category-cont">
             <a href="#">
               <div class="category-box">
                 <div class="category-desc">
@@ -223,7 +439,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6  category-cont">
             <a href="#">
               <div class="category-box">
                 <div class="category-desc">
@@ -238,7 +454,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6  category-cont">
             <a href="#">
               <div class="category-box">
                 <div class="category-desc">
@@ -253,7 +469,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6  category-cont">
             <a href="#">
               <div class="category-box">
                 <div class="category-desc">
@@ -268,7 +484,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6  category-cont">
             <a href="#">
               <div class="category-box">
                 <div class="category-desc">
@@ -283,7 +499,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6  category-cont">
             <a href="#">
               <div class="category-box">
                 <div class="category-desc">
@@ -336,9 +552,159 @@
             </div>
           </div>
         </div>
-
     </section>
     <!-- HOW IT WORKS ENDS -->
+
+    <!-- CANDIDATE SECTION -->
+    <section class="candidate">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center main-heading">
+            <div class="main-heading">
+              <p>Best Candidate of The Year</p>
+              <h2>Hire Expert <span>Candidate</span></h2>
+            </div>
+          </div>
+        </div>
+        <!--/row-->
+        <div class="row all-candidates">
+          <!-- Single Freelancer Style 2 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="top-candidate-wrap style-2">
+              <div class="top-candidate-box">
+                <span class="tpc-status">Available</span>
+                <h4 class="flc-rate">$17/hr</h4>
+                <div class="tp-candidate-inner-box">
+                  <div class="top-candidate-box-thumb">
+                    <img src="assets/img/candidate.jpg" class="img-responsive img-circle" alt="">
+                  </div>
+                  <div class="top-candidate-box-detail">
+                    <h4>Agustin L. Smith</h4>
+                    <span class="location">Australia</span>
+                  </div>
+                  <div class="rattings">
+                    <i class="fa fa-star fill"></i>
+                    <i class="fa fa-star fill"></i>
+                    <i class="fa fa-star fill"></i>
+                    <i class="fa fa-star-half fill"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="top-candidate-box-extra">
+                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
+                  <ul>
+                    <li>Php</li>
+                    <li>Android</li>
+                    <li>Html</li>
+                    <li class="more-skill bg-primary">+3</li>
+                  </ul>
+                </div>
+                <a href="top-candidate-detail.html" class="btn btn-candidate-two js-bg-primary">View Detail</a>
+                <a href="#l" class="btn btn-candidate-two bg-info">Shortlist</a>
+              </div>
+            </div>
+          </div>
+          <!-- Single Freelancer Style 2 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="top-candidate-wrap style-2">
+              <div class="top-candidate-box">
+                <span class="tpc-status bg-warning">At Work</span>
+                <h4 class="flc-rate">$22/hr</h4>
+                <div class="tp-candidate-inner-box">
+                  <div class="top-candidate-box-thumb">
+                    <img src="assets/img/candidate.jpg" class="img-responsive img-circle" alt="">
+                  </div>
+                  <div class="top-candidate-box-detail">
+                    <h4>Delores R. Williams</h4>
+                    <span class="location">United States</span>
+                  </div>
+                  <div class="rattings">
+                    <i class="fa fa-star fill"></i>
+                    <i class="fa fa-star fill"></i>
+                    <i class="fa fa-star fill"></i>
+                    <i class="fa fa-star-half fill"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="top-candidate-box-extra">
+                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
+                  <ul>
+                    <li>Php</li>
+                    <li>Android</li>
+                    <li>Html</li>
+                    <li class="more-skill bg-primary">+3</li>
+                  </ul>
+                </div>
+                <a href="top-candidate-detail.html" class="btn btn-candidate-two js-bg-primary">View Detail</a>
+                <a href="#l" class="btn btn-candidate-two bg-info">Shortlist</a>
+              </div>
+            </div>
+          </div>
+          <!-- Single Freelancer Style 2 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="top-candidate-wrap style-2">
+              <div class="top-candidate-box">
+                <span class="tpc-status">Available</span>
+                <h4 class="flc-rate">$19/hr</h4>
+                <div class="tp-candidate-inner-box">
+                  <div class="top-candidate-box-thumb">
+                    <img src="assets/img/candidate.jpg" class="img-responsive img-circle" alt="">
+                  </div>
+                  <div class="top-candidate-box-detail">
+                    <h4>Daniel Disroyer</h4>
+                    <span class="location">Pakistan</span>
+                  </div>
+                  <div class="rattings">
+                    <i class="fa fa-star fill"></i>
+                    <i class="fa fa-star fill"></i>
+                    <i class="fa fa-star fill"></i>
+                    <i class="fa fa-star-half fill"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="top-candidate-box-extra">
+                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui.</p>
+                  <ul>
+                    <li>Php</li>
+                    <li>Android</li>
+                    <li>Html</li>
+                    <li class="more-skill bg-primary">+3</li>
+                  </ul>
+                </div>
+                <a href="top-candidate-detail.html" class="btn btn-candidate-two js-bg-primary">View Detail</a>
+                <a href="#l" class="btn btn-candidate-two bg-info">Shortlist</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Single Freelancer -->
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="text-center">
+              <a href="freelancers-2.html" class="btn js-bg-primary">Load More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CANDIDATE SECTION ENDS -->
+
+    <!-- SUBSCRIBE SECTION -->
+    <section class="subscribe bg-js_pri">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">    
+            <div class="call-to-act">
+              <div class="call-to-act-head col-sm-12 col-md-10 m-3">
+                <h3>Want to Become a Success Employers?</h3>
+                <span>We'll help you to grow your career and growth.</span>
+              </div>
+              <a href="register.html" class="btn btn-call-to-act col-sm-12 col-md-2 m-3">SignUp Today</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SUBSCRIBE SECTION ENDS -->
 
   </main><!-- End #main -->
 
