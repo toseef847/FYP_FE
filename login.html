@@ -15,22 +15,25 @@
 
   <!-- FONT AWESOME KIT -->
   <script src="https://kit.fontawesome.com/ec97f2a83c.js" crossorigin="anonymous"></script>
-  <!-- Vendor CSS Files -->
+
+ <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <!-- <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> -->
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
 
+  <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
@@ -55,8 +58,46 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li class="navlink_highlighted signup"><a href="register.html">Sign Up</a></li>
-          <li class="navlink_highlighted login"><a href="login.html">Log In</a></li>
-
+          <li class="navlink_highlighted login"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Log In</a>
+            <div class="modal fade login-model" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalCenterTitle">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body new-logwrap login-form-cont">
+                    <form>
+                    <div class="form-group">
+                      <label>Email</label>
+                      <div class="input-with-icon">
+                        <input type="email" class="form-control" placeholder="Enter Your Email">
+                        <i class="far fa-envelope"></i>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <div class="input-with-icon">
+                        <input type="password" class="form-control" placeholder="Enter Your Password">
+                        <i class="fas fa-lock"></i>
+                      </div>
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    </div>
+                    <div class="form-groups">
+                      <button type="submit" class="btn full-width">Login</button>
+                    </div>
+                    <small class="no-account">Don't have an account? <a href="register.html">Register here</a></small>
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -169,6 +210,25 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <nav class="mobile-nav d-lg-none">
+    <ul>
+      <li class="active"><a href="index.html">Home</a></li>
+        <li class="drop-down"><a href="">About</a>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+          </ul>
+        </li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-nav-overly"></div>
 
 </body>
 
