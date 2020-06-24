@@ -30,7 +30,7 @@
 
         if ($('body').hasClass('mobile-nav-active')) {
           $('body').removeClass('mobile-nav-active');
-          $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+          $('.mobile-nav-toggle i').toggleClass('fa-bars fa-times');
           $('.mobile-nav-overly').fadeOut();
         }
         return false;
