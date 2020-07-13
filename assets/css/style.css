@@ -1781,7 +1781,6 @@ ul.ove-detail-list li i {
   height: 10px;
   transition: .9s;
   background-color: var(--primary-color);
-  width: 70%!important;
 }
 
 /*--------------------------------------------------------------
